@@ -1,0 +1,67 @@
+import random
+
+emoji={"r":"🪨","p":"📃","s":"✂️"}
+
+#general choices
+choices=("r","p","s") 
+
+while(True):
+    #invalid input
+    user_choice=input(" rock / paper / scissor? (r/p/s):  ").lower()
+    computer_choice=random.choice(choices)
+
+    
+ 
+    if user_choice not in choices :
+     print(" !!! Invalid !!! ")
+     print(" please enter valid choice ")
+     continue
+
+    print(f' you chose {emoji[user_choice] } ')
+    print(f' computer chose {emoji[computer_choice] } ') 
+
+   
+    if user_choice==computer_choice:
+        print("TIES !")
+    elif(
+        (user_choice=="r"and computer_choice=="s") or
+        (user_choice=="p"and computer_choice=="r") or
+        (user_choice=="s"and computer_choice=="p")):
+
+        print(" ~~🎉YOU WON💕~~ ")
+
+    else:
+        print ("💀 YOU LOST 💀 ")
+    want_to_continue=input("Play again ❤️ \n Continue ( y or n ):  ").lower()
+    if want_to_continue=="n":
+     break
+ 
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
